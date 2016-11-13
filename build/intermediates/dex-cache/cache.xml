@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_e481b6468ecd52aa5ae110f2c6224cfcef883fce.jar" />
+    </item>
+    <item
+        jar="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_a4cae19eba0cb87f706b156bd4b2782b5e7ef832.jar" />
+    </item>
+    <item
+        jar="/Users/hojaeson/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_83bbe36478d3756651b2284d49a992e536db1cf4.jar" />
+    </item>
+    <item
+        jar="/Users/hojaeson/AndroidWorkspace/BAC/app/libs/opencsv-1.7.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="700dd9c8cf4753214384f1f26c976948ddcca5e8">
+        <dex dex="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/pre-dexed/debug/opencsv-1.7_daae4df8fe03253b0796f46376d9c05109106469.jar" />
+    </item>
+    <item
+        jar="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_94a20ab2c5a5584f1df1204fbe9883e86f2316ca.jar" />
+    </item>
+    <item
+        jar="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_143ea293a3598071d955573dbec14db094555c9c.jar" />
+    </item>
+    <item
+        jar="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_cbb313bc36891a8b009b19657fd63cc921589f62.jar" />
+    </item>
+    <item
+        jar="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_69b7c6897d0662f6ccba30ca12f35e7e0fd7faf4.jar" />
+    </item>
+    <item
+        jar="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/hojaeson/AndroidWorkspace/BAC/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_b1f690fe7269cf86265b308e79a897c56c0346f4.jar" />
+    </item>
+
+</items>

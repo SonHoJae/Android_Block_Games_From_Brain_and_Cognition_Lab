@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('opencsv-1.7.jar'))

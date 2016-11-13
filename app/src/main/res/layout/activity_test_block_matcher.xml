@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:alpha="0.75"
+    android:weightSum="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="center_horizontal">
+        <brainandcognitionlab.bac.Controller.Timer.Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="Chronometer"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.9"
+        android:weightSum="10">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1" >
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout"
+            android:gravity="center"
+            android:layout_weight="7">
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_height="match_parent"
+                android:layout_width="750dp"
+                android:stretchColumns="0,1,2,3,4">
+            </TableLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@android:color/holo_orange_light"
+            android:id="@+id/candidateLayout1">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@android:color/holo_orange_light"
+            android:id="@+id/candidateLayout2">
+        </LinearLayout>
+
+    </LinearLayout>
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/linearLayout"
+        android:layout_weight="0.1"
+        android:focusable="false"
+        android:padding="10dp"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="73dp"
+            android:id="@+id/status"
+            android:layout_weight="0.89"
+            android:layout_gravity="left" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/first_star"
+            android:src="@drawable/white_star"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="right" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/second_star"
+            android:src="@drawable/white_star"
+            android:layout_marginLeft="20dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/third_star"
+            android:src="@drawable/white_star"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="30dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

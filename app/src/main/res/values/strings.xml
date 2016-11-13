@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Brain\nCognition</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_category">CategoryActivity</string>
+    <string name="title_activity_blockchecker">BlockCheckerActivity</string>
+    <string name="title_activity_test__reverse_order_tracker">Test_ReverseOrderTracker_Activity</string>
+    <string name="title_activity_test__number_order_checker">Test_NumberOrderChecker_Activity</string>
+    <string name="resourceId">resource</string>
+    <string name="pic_0">pic_0</string>
+    <string name="pic_1">pic_1</string>
+    <string name="pic_2">pic_2</string>
+    <string name="pic_3">pic_3</string>
+    <string name="pic_4">pic_4</string>
+    <string name="pic_5">pic_5</string>
+    <string name="pic_6">pic_6</string>
+    <string name="pic_7">pic_7</string>
+    <string name="pic_8">pic_8</string>
+    <string name="pic_9">pic_9</string>
+    <string name="title_activity_test__counting_bananas_">Test_CountingBananas_Activity</string>
+    <string name="check">key</string>
+</resources>

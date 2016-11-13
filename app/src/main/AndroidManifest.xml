@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="brainandcognitionlab.bac">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/brain"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- android:name=".Model.LoginActivity" -->
+        <activity
+            android:name=".Model.LoginActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Model.CategoryActivity"
+            android:label="CategoryActivity"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Category_concentration"
+            android:label="Concentration_category"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_OrderTracker_Activity"
+            android:label="OrderTracker_test"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_ReverseOrderTracker_Activity"
+            android:label="@string/title_activity_test__reverse_order_tracker"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_BlockChecker_Activity"
+            android:label="@string/title_activity_blockchecker"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_NumberBlockChecker_Activity"
+            android:label="@string/title_activity_test__number_order_checker"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_NumberOrderTracker_Activity"
+            android:label="@string/title_activity_test__number_order_checker"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.memory_test.Category_memory"
+            android:label="Memory_category"></activity>
+        <activity
+            android:name=".Model.test_list.memory_test.Tests.Test_blockchecker_Activity"
+            android:label="blockchecker"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_BlockMatcher_Activity"
+            android:label="block_matcher"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_MapNumberToBlock_Letter_Activity"
+            android:label="Map_Number_To_Block"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_UserChoosenBlockTracker_Activity"
+            android:label="User_Choosen_Block_Tracker"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_MapNumberAsOrder_Fruit_Activity"
+            android:label="Map_Number_As_Order"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_MapNumberAsReverseOrder_Fruit_Activity"
+            android:label="Map_Number_As_Reverse_Order"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_Block_Matcher_Letter_Activity"
+            android:label="Test_Block_Matcher_Letter_Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_MapNumberToBlock_Number_Activity"
+            android:label="Test_Block_Matcher_Letter_Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_MapNumberToBlock_Fruit_Activity"
+            android:label="Test_Block_Matcher_Letter_Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_MapNumberAsOrder_Letter_Activity"
+            android:label="Test_Block_Matcher_Letter_Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_MapNumberAsOrder_Number_Activity"
+            android:label="Test_Block_Matcher_Letter_Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_MapNumberAsReverseOrder_Letter_Activity"
+            android:label="Test_Block_Matcher_Letter_Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_MapNumberAsReverseOrder_Number_Activity"
+            android:label="Test_Block_Matcher_Letter_Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_PathFinder_Activity"
+            android:label="Test_PathFinder_Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_CountingBananas_Activity"
+            android:label="Test_CountingBananas"
+            android:screenOrientation="landscape"
+            ></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_JudgeFromStimulus_OX_Activity"
+            android:label="Test_CountingBananas"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_SelectDirectionFromStimulus_Activity"
+            android:label="Test_SelectDirectionFromStimulus"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_SelectShapeFromStimulus_Activity"
+            android:label="Test_SelectShapeFromStimulus"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_JudgeFromStimulus_Color_Activity"
+            android:label="Test_JudgeFromStimulus_Color"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Model.test_list.concentration_test.Tests.Test_SelectColorFromStimulus_Activity"
+            android:label="Test_SelectColorFromStimulus"
+            android:screenOrientation="landscape"></activity>
+    </application>
+
+</manifest>
