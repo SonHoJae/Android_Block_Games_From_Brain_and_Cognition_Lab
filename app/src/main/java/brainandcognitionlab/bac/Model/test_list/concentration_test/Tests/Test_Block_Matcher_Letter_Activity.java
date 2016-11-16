@@ -99,7 +99,6 @@ public class Test_Block_Matcher_Letter_Activity extends Activity implements OnCl
             candidateImageId[i] = this.getResources().getIdentifier("w"+String.valueOf(i), "drawable", this.getPackageName());
         }
 
-        BuildCandidateLayout();
 
         //테이블을 생성하는 부분 -> 이 위에 initialize module만들어야함.
         table = new ImageButton[ROWS][];
@@ -178,12 +177,18 @@ public class Test_Block_Matcher_Letter_Activity extends Activity implements OnCl
     private class BlockAsynkTask extends AsyncTask<ArrayList<Integer>, Integer, Integer> {
         @Override
         protected Integer doInBackground(ArrayList<Integer>... params) {
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             for (int i = 0; i < pickedSize; i++)
                 publishProgress(params[0].get(i), params[1].get(i));
             return 0;
         }
 
         protected void onPreExecute() {
+
             tableFunc.disableClickBlocks(true,table,ROWS,COLS);
         }
 
@@ -206,6 +211,7 @@ public class Test_Block_Matcher_Letter_Activity extends Activity implements OnCl
             chronometer = (Chronometer) findViewById(R.id.chronometer);
             chronometer.setBase(SystemClock.elapsedRealtime());
             chronometer.start();
+            BuildCandidateLayout();
         }
 
     }

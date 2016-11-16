@@ -122,7 +122,11 @@ public class Test_JudgeFromStimulus_Color_Activity extends Activity implements O
         }
         @Override
         protected Void doInBackground(int[]... stimulusArray) {
-
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             publishProgress(3);
             try {
                 Thread.sleep(loadingTime);
@@ -222,7 +226,7 @@ public class Test_JudgeFromStimulus_Color_Activity extends Activity implements O
         stimulusView.setEnabled(false);
         stimulusView.setBackgroundColor(Color.CYAN);
         Log.i("test", String.valueOf(v.getTag()));
-        if (v.getTag() == -1) {
+        if ((int)v.getTag() == -1) {
             v.setTag(0);
         } else {
             failATest(this);

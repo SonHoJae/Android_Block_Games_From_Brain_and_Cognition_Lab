@@ -148,7 +148,11 @@ public class Test_SelectDirectionFromStimulus_Activity extends Activity  {
         }
         @Override
         protected Void doInBackground(int[]... stimulusArray) {
-
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             publishProgress(LOADING);
             try {
                 Thread.sleep(intervalTime);

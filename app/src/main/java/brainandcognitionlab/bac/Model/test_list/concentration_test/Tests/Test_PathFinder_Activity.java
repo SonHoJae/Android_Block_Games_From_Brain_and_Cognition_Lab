@@ -121,19 +121,23 @@ public class Test_PathFinder_Activity extends Activity
     private class BlockAsynkTask extends AsyncTask<Line, Line, Integer> {
         @Override
         protected Integer doInBackground(Line... lines) {
-
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             for (int i = 0; i < lines.length; i++) {
                 publishProgress(lines[i]);
                 Log.i("asynktask", String.valueOf(lines.length));
             }
-            /*try {
-                Thread.sleep(interval);
+            try {
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            }*/
+            }
             return 0;
         }
-
+        @Override
         protected void onPreExecute() {
             tableFunc.disableClickBlocks(true, table, ROWS, COLS);
         }
@@ -141,7 +145,6 @@ public class Test_PathFinder_Activity extends Activity
         protected void onProgressUpdate(Line... line) {
             Log.i("asynktask", String.valueOf("X " + String.valueOf(line[0].getP1().getX()) + " " + String.valueOf(line[0].getP1().getY())) + " Y " +
                     String.valueOf(line[0].getP2().getX() + " " + String.valueOf(line[0].getP2().getY())));
-
 
             if (line[0].isHorizontal()) {
                 for (int i = line[0].getP1().getX(); i != line[0].getP2().getX(); ) {
@@ -187,6 +190,7 @@ public class Test_PathFinder_Activity extends Activity
             chronometer = (Chronometer) findViewById(R.id.chronometer);
             chronometer.setBase(SystemClock.elapsedRealtime());
             chronometer.start();
+            tableFunc.cleanTable(table, ROWS, COLS, R.drawable.dot3);
         }
     }
 
@@ -233,7 +237,7 @@ public class Test_PathFinder_Activity extends Activity
                             alertFunc.alertSuccessDialogWithTransition(intent);
                         }
                     }
-                } else if (currentTag == v.getTag() || (int)v.getTag() < currentTag) {
+                } else if (currentTag == (int)v.getTag() || (int)v.getTag() < currentTag) {
                 } else {
                     rs.failToRound();
                     chronometer.stop();

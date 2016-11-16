@@ -109,7 +109,11 @@ public class Test_BlockChecker_Activity extends Activity implements OnClickListe
     private class BlockAsynkTask extends AsyncTask<ArrayList<Integer>, Integer, Integer> {
         @Override
         protected Integer doInBackground(ArrayList<Integer>[] params) {
-
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             for (int i = 0; i < pickedSize; i++) {
                 publishProgress(params[0].get(i));
                 Log.i("asynktask", String.valueOf(params[0].get(i)));
@@ -123,6 +127,7 @@ public class Test_BlockChecker_Activity extends Activity implements OnClickListe
         }
 
         protected void onPreExecute() {
+
             tableFunc.disableClickBlocks(true, table, ROWS, COLS);
         }
 
@@ -162,7 +167,7 @@ public class Test_BlockChecker_Activity extends Activity implements OnClickListe
         Boolean isViewTrue = false;
         for(int i=0;i<pickedSize;i++)
         {
-            if(v.getTag() == pickedBlockNumbers[i])
+            if((int)v.getTag() == pickedBlockNumbers[i])
                 isViewTrue = true;
         }
         if(isViewTrue == true){

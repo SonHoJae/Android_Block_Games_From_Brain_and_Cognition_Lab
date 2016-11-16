@@ -116,15 +116,20 @@ public class Test_CountingBananas_Activity extends AppCompatActivity implements 
     private class ThrowingBananasAsynkTask extends AsyncTask<Monkey[], Monkey[], Integer> {
         @Override
         protected Integer doInBackground(Monkey[]... monkeys) {
-
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             for (int i = 0; i < level * 2; i++) {
+
+                publishProgress(monkeys);
+                Log.i("test", "test");
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                publishProgress(monkeys);
-                Log.i("test", "test");
             }
             return 1;
         }

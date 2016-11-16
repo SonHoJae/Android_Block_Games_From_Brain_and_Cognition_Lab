@@ -8,6 +8,7 @@
     <string name="title_activity_test__reverse_order_tracker">Test_ReverseOrderTracker_Activity</string>
     <string name="title_activity_test__number_order_checker">Test_NumberOrderChecker_Activity</string>
     <string name="resourceId">resource</string>
+    <string name="answerImageId">answerImageId</string>
     <string name="pic_0">pic_0</string>
     <string name="pic_1">pic_1</string>
     <string name="pic_2">pic_2</string>

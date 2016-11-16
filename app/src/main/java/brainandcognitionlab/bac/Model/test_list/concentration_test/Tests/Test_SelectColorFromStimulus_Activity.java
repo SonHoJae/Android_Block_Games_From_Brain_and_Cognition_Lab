@@ -148,7 +148,11 @@ public class Test_SelectColorFromStimulus_Activity extends Activity  {
         }
         @Override
         protected Void doInBackground(int[]... stimulusArray) {
-
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             publishProgress(LOADING);
             try {
                 Thread.sleep(intervalTime);
@@ -176,7 +180,6 @@ public class Test_SelectColorFromStimulus_Activity extends Activity  {
             publishProgress(SUCCESS);
             return null;
         }
-
         @Override
         protected void onProgressUpdate(Integer... stimulus) {
             Log.i("stimulus",String.valueOf(stimulus[0]));

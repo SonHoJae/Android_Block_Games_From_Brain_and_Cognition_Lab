@@ -157,7 +157,11 @@ public class Test_MapNumberAsOrder_Letter_Activity extends Activity {
     private class PopValueAsynkTask extends AsyncTask<ArrayList<Integer>, Integer, ArrayList<Integer>> {
         @Override
         protected ArrayList<Integer> doInBackground(ArrayList<Integer>... params) {
-
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             for (int i = 0; i < pickedSize; i++) {
                 publishProgress(params[0].get(i));
                 try {
@@ -176,8 +180,9 @@ public class Test_MapNumberAsOrder_Letter_Activity extends Activity {
             display.getSize(displaySize);
             int width = displaySize.x;
             int height = displaySize.y;
-            answerImage.getLayoutParams().height = width/2;
-            answerImage.getLayoutParams().width = height/2;
+            answerImage.getLayoutParams().height = width/3;
+            answerImage.getLayoutParams().width = height/3;
+            answerImage.requestLayout();
         }
 
         @Override
@@ -195,6 +200,8 @@ public class Test_MapNumberAsOrder_Letter_Activity extends Activity {
                     row.addView(table[randomArray[i*5+j] / 5][ randomArray[i*5+j] % 5]);
                 }
                 table_layout.addView(row);
+                table_layout.setScaleX(0.8f);
+                table_layout.setScaleY(0.8f);
             }
             Date date = new Date();
             start_date = date.getDate();

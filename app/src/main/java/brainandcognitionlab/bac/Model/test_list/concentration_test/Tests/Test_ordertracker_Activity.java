@@ -114,21 +114,23 @@ public class Test_OrderTracker_Activity extends Activity implements OnClickListe
         @Override
         protected Integer doInBackground(ArrayList<Integer>[] params) {
             try {
-                Thread.sleep(interval);
-                for (int i = 0; i < pickedSize; i++) {//table[params[0].get(i)/5][params[0].get(i)%5];
-                    publishProgress(params[0].get(i));
-                    Thread.sleep(interval);
-                    Log.i("test", String.valueOf(params[0].get(i)));
-                }
-                return 0;
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            return null;
+            for (int i = 0; i < pickedSize; i++) {//table[params[0].get(i)/5][params[0].get(i)%5];
+                publishProgress(params[0].get(i));
+                try {
+                    Thread.sleep(interval);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Log.i("test", String.valueOf(params[0].get(i)));
+            }
+            return 0;
         }
-
+        @Override
         protected void onPreExecute() {
-
             tableFunc.disableClickBlocks(true, table, ROWS, COLS);
         }
 
@@ -165,7 +167,7 @@ public class Test_OrderTracker_Activity extends Activity implements OnClickListe
     public void onClick(View v) {
 
         Log.i("test", v.getTag() + " " + pickedBlockNumbers[orderCheckNumber]);
-        if (v.getTag() == pickedBlockNumbers[orderCheckNumber]) {
+        if ((int)v.getTag() == pickedBlockNumbers[orderCheckNumber]) {
             //table[(int) v.getTag() / ROWS][(int) v.getTag() % COLS].setText("T");
             table[(int) v.getTag() / ROWS][(int) v.getTag() % COLS].setClickable(false);
             orderCheckNumber++;

@@ -69,6 +69,8 @@ public class Test_MapNumberToBlock_Fruit_Activity extends Activity {
     private DBHelper dbHelper = new DBHelper(this);
     private String start_date,end_date;
     private Integer candidateImageId[];
+    private Display display;
+    private Point displaySize;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,7 +124,6 @@ public class Test_MapNumberToBlock_Fruit_Activity extends Activity {
         //Value
         PopValueAsynkTask popValueAsynkTask = new PopValueAsynkTask();
         popValueAsynkTask.execute(randomValueArrayList);
-        BuildCandidateLayout();
 
         //show Answer
     }
@@ -178,7 +179,11 @@ public class Test_MapNumberToBlock_Fruit_Activity extends Activity {
     private class PopValueAsynkTask extends  AsyncTask<ArrayList<Integer>, Integer, Void> {
         @Override
         protected Void doInBackground(ArrayList<Integer>... params) {
-
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             for (int i = 0; i < pickedSize; i++) {
                 publishProgress(params[0].get(i));
                 try {
@@ -189,7 +194,10 @@ public class Test_MapNumberToBlock_Fruit_Activity extends Activity {
             }
             return null;
         }
+        @Override
+        protected void onPreExecute() {
 
+        }
         protected void onProgressUpdate(Integer... result) {
             Log.i("Value", "Value : " + String.valueOf(result[0]));
             answerImage.setImageResource(candidateImageId[result[0]]);
@@ -199,8 +207,8 @@ public class Test_MapNumberToBlock_Fruit_Activity extends Activity {
             display.getSize(size);
             int width = size.x;
             int height = size.y;
-            answerImage.getLayoutParams().height = width/2;
-            answerImage.getLayoutParams().width = height/2;
+            answerImage.getLayoutParams().height = width/3;
+            answerImage.getLayoutParams().width = height/3;
         }
 
         @Override
@@ -287,6 +295,7 @@ public class Test_MapNumberToBlock_Fruit_Activity extends Activity {
             chronometer = (Chronometer) findViewById(R.id.chronometer);
             chronometer.setBase(SystemClock.elapsedRealtime());
             chronometer.start();
+            BuildCandidateLayout();
         }
 
     }

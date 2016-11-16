@@ -137,7 +137,11 @@ public class Test_NumberOrderTracker_Activity extends Activity implements OnClic
     private class BlockAsynkTask extends AsyncTask<ArrayList<Integer>, Integer, Integer> {
         @Override
         protected Integer doInBackground(ArrayList<Integer>[] params) {
-
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             for (int i = 0; i < pickedSize; i++) {
                 publishProgress(params[0].get(i), i);
                 try {
@@ -154,7 +158,7 @@ public class Test_NumberOrderTracker_Activity extends Activity implements OnClic
             }
             return 0;
         }
-
+        @Override
         protected void onPreExecute() {
 
             tableFunc.disableClickBlocks(true, table, ROWS, COLS);
@@ -164,6 +168,7 @@ public class Test_NumberOrderTracker_Activity extends Activity implements OnClic
             //give a number instead of a mark(for number_order_checker
             //table[result[0] / ROWS][result[0] % COLS].setText(String.valueOf(pickedBlockNumbers[1][result[1]]));
             table[result[0] / ROWS][result[0] % COLS].setTag(R.string.resourceId, pickedBlockNumbers[1][result[1]]);
+            table[result[0] / ROWS][result[0] % COLS].setTag(R.string.answerImageId,candidateImageId[pickedBlockNumbers[1][result[1]]]);
             table[result[0] / ROWS][result[0] % COLS].setImageResource(candidateImageId[pickedBlockNumbers[1][result[1]]]);
             table[result[0] / ROWS][result[0] % COLS].setScaleType(ImageView.ScaleType.FIT_CENTER);
             table[result[0] / ROWS][result[0] % COLS].setAdjustViewBounds(true);
@@ -206,7 +211,7 @@ public class Test_NumberOrderTracker_Activity extends Activity implements OnClic
             //table[(int) v.getTag() / ROWS][(int) v.getTag() % COLS].setText(String.valueOf((int)v.getTag(R.string.resourceId)));
             table[(int) v.getTag() / ROWS][(int) v.getTag() % COLS].setClickable(false);
             orderCheckNumber++;
-            tableFunc.makeButtonCorrectImage((ImageButton)v,R.drawable.s1);
+            tableFunc.makeButtonCorrectImage((ImageButton)v,(int)v.getTag(R.string.answerImageId));
             if (orderCheckNumber == pickedSize) {
 
                 rs.successToRound();

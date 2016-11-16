@@ -191,7 +191,7 @@ public class Test_UserChoosenBlockTracker_Activity extends Activity implements O
         @Override
         protected Integer doInBackground(ArrayList<Integer>... params) {
             try {
-                Thread.sleep(500);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -200,6 +200,7 @@ public class Test_UserChoosenBlockTracker_Activity extends Activity implements O
             return 0;
         }
 
+        @Override
         protected void onPreExecute() {
             tableFunc.disableClickBlocks(true,table,ROWS,COLS);
             tableFunc.cleanTable(table,ROWS,COLS,R.drawable.i);
@@ -240,7 +241,7 @@ public class Test_UserChoosenBlockTracker_Activity extends Activity implements O
         Log.i("endOfTest", String.valueOf(clickedTableBlock.getTag()) + "--" + String.valueOf(trackedMemory[currentPoint]));
 
 
-        if(trackedMemory[currentPoint] == -2 && clickedTableBlock.getTag() != -1) {
+        if(trackedMemory[currentPoint] == -2 && (int)clickedTableBlock.getTag() != -1) {
             //successful in small round
             trackedMemory[currentPoint] = Integer.parseInt(String.valueOf(clickedTableBlock.getTag()));
 
