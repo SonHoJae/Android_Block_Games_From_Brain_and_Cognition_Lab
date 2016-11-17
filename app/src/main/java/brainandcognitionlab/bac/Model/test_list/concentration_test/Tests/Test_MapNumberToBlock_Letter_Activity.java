@@ -192,14 +192,6 @@ public class Test_MapNumberToBlock_Letter_Activity extends Activity {
             }
             return null;
         }
-        @Override
-        protected void onPreExecute() {
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
         protected void onProgressUpdate(Integer... result) {
             Log.i("Value", "Value : " + String.valueOf(result[0]));
             answerImage.setImageResource(candidateImageId[result[0]]);
@@ -209,8 +201,8 @@ public class Test_MapNumberToBlock_Letter_Activity extends Activity {
             display.getSize(size);
             int width = size.x;
             int height = size.y;
-            answerImage.getLayoutParams().height = width/3;
-            answerImage.getLayoutParams().width = height/3;
+            answerImage.getLayoutParams().height = width/4;
+            answerImage.getLayoutParams().width = height/4;
         }
 
         @Override

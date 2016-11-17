@@ -181,8 +181,14 @@ public class Test_BlockMatcher_Activity extends Activity implements OnClickListe
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            for (int i = 0; i < pickedSize; i++)
+            for (int i = 0; i < pickedSize; i++) {
                 publishProgress(params[0].get(i), params[1].get(i));
+            }
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             return 0;
         }
 
@@ -199,7 +205,7 @@ public class Test_BlockMatcher_Activity extends Activity implements OnClickListe
         }
 
         protected void onPostExecute(Integer result) {
-            //cleanTable();
+            tableFunc.cleanTable(table,ROWS,COLS,R.drawable.s);
             Date date = new Date();
             start_date = date.getDate();
             tableFunc.disableClickBlocks(false, table, ROWS, COLS);

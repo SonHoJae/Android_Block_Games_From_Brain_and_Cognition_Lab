@@ -207,8 +207,8 @@ public class Test_MapNumberToBlock_Fruit_Activity extends Activity {
             display.getSize(size);
             int width = size.x;
             int height = size.y;
-            answerImage.getLayoutParams().height = width/3;
-            answerImage.getLayoutParams().width = height/3;
+            answerImage.getLayoutParams().height = width/4;
+            answerImage.getLayoutParams().width = height/4;
         }
 
         @Override
