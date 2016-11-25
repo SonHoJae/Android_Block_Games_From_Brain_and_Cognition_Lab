@@ -2,103 +2,85 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="C:\Users\pancake\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_2bc17ed3b085b563c1362f04a6a6baa2531c26ec\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\libs\opencsv-1.7.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="700dd9c8cf4753214384f1f26c976948ddcca5e8">
-        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\transforms\dex\debug\folders\1000\2\opencsv-1.7_d37a17a62cba3774ed8df8c50085a5f4ea5f47d8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_5f66f564f1226775c4adb1208df2540ac078b196\classes.dex" />
+        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.4.0_5f66f564f1226775c4adb1208df2540ac078b196.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_425e6454933fabbd2efb09276e7ac41febb5a538\classes.dex" />
+        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_425e6454933fabbd2efb09276e7ac41febb5a538.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\libs\opencsv-1.7.jar"
+        jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="f0ce76be1323c0e2848fef3040206313b13cceb4">
-        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_6e66d6a7305f15fba1eaa7ccffadbcfb0e176a00\classes.dex" />
+        sha1="700dd9c8cf4753214384f1f26c976948ddcca5e8">
+        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\pre-dexed\debug\opencsv-1.7_d37a17a62cba3774ed8df8c50085a5f4ea5f47d8.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_cea4bad21eb00f5522eeb9abd01ed1281a5ffaeb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_69f3758a608ad808fa5a7729f11cc9820d0d96dc\classes.dex" />
+        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_69f3758a608ad808fa5a7729f11cc9820d0d96dc.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_478b14cddfc5d1e801fc7c63df0f201b147e906c\classes.dex" />
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_cea4bad21eb00f5522eeb9abd01ed1281a5ffaeb.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_bd3a8547732ac1917dbcda1fa14868b61df925af\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_10cb826c5ec548baf4e0a15ee03e43e19c9e27f6\classes.dex" />
+        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_10cb826c5ec548baf4e0a15ee03e43e19c9e27f6.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="b38507c488a0c2ee966b8d6e12f53eed0b0e3776">
-        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_b6ce201c1d72e2b31ab99f2de04dad6f7104af35\classes.dex" />
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_478b14cddfc5d1e801fc7c63df0f201b147e906c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.4.0_bd3a8547732ac1917dbcda1fa14868b61df925af.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\pancake\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="D:\sonhj07-bac-9ba0887cc421\sonhj07-bac-9ba0887cc421\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_2bc17ed3b085b563c1362f04a6a6baa2531c26ec.jar" />
     </item>
 
 </items>

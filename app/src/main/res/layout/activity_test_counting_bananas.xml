@@ -23,61 +23,70 @@
         android:layout_height="0dp"
         android:id="@+id/relativeLayout"
         android:orientation="vertical"
-        android:layout_weight="0.9">
+        android:layout_weight="0.9"
+        android:gravity="center">
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/monkeyImage1"
                 android:src="@drawable/get_banana"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginTop="50dp"  />
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/monkeyImage2"
                 android:src="@drawable/get_banana"
-                android:layout_marginLeft="200dp"/>
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="50dp"   />
         </LinearLayout>
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/monkeyImage3"
                 android:src="@drawable/throw_banana"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/answerEdt1"
-                android:text="edit" />
+                android:layout_marginTop="50dp"  />
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/monkeyImage4"
                 android:src="@drawable/throw_banana"
-                android:layout_marginLeft="170dp"
-                android:layout_marginTop="10dp" />
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="50dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/answerEdt1"
+                android:text="edit"
+                android:layout_marginTop="50dp"  />
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/answerEdt2"
-                android:text="edit" />
+                android:text="edit"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="50dp"  />
         </LinearLayout>
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/submitButton"
-                android:text="submit"
-                android:layout_marginLeft="170dp"
-                android:layout_marginTop="10dp" />
+                android:text="submit"  />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout

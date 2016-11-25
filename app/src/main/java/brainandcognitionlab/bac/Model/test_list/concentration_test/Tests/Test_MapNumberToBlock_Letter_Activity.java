@@ -284,7 +284,7 @@ public class Test_MapNumberToBlock_Letter_Activity extends Activity {
         }
 
         protected void onPostExecute(Integer result) {
-            //cleanTable();
+            tableFunc.cleanTable(table,ROWS,COLS,R.drawable.w_background);
             Date date = new Date();
             start_date = date.getDate();
             tableFunc.disableClickBlocks(false, table, ROWS, COLS);

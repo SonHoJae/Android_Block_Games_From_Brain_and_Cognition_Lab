@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -192,33 +193,41 @@ public class Test_UserChoosenBlockTracker_Activity extends Activity implements O
         protected Integer doInBackground(ArrayList<Integer>... params) {
             try {
                 Thread.sleep(3000);
+                publishProgress(-2);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             for (int i = 0; i < 10; i++)
                 publishProgress(params[0].get(i), params[1].get(i));
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             return 0;
         }
 
         @Override
         protected void onPreExecute() {
             tableFunc.disableClickBlocks(true,table,ROWS,COLS);
-            tableFunc.cleanTable(table,ROWS,COLS,R.drawable.i);
+            //tableFunc.cleanTable(table,ROWS,COLS,R.drawable.i);
         }
 
         protected void onProgressUpdate(Integer... result) {
 
-            table[result[0] / ROWS][result[0] % COLS].setTag(String.valueOf(result[1]));
-            table[result[0] / ROWS][result[0] % COLS].setImageResource(candidateImageId[result[1]]);
-            table[result[0] / ROWS][result[0] % COLS].setScaleType(ImageView.ScaleType.FIT_XY);
-
-            //table[result[0] / ROWS][result[0] % COLS].setAdjustViewBounds(true);
-
+            if(result[0] == -2){
+                tableFunc.cleanTable(table,ROWS,COLS,R.drawable.i);
+            }else {
+                table[result[0] / ROWS][result[0] % COLS].setTag(String.valueOf(result[1]));
+                table[result[0] / ROWS][result[0] % COLS].setImageResource(candidateImageId[result[1]]);
+                table[result[0] / ROWS][result[0] % COLS].setTag(R.string.candidate, candidateImageId[result[1]]);
+                table[result[0] / ROWS][result[0] % COLS].setScaleType(ImageView.ScaleType.FIT_XY);
+            }
 
         }
 
         protected void onPostExecute(Integer result) {
-            //cleanTable();
+            tableFunc.cleanTable(table,ROWS,COLS,R.drawable.w_background);
             Date date = new Date();
             start_date = date.getDate();
             tableFunc.disableClickBlocks(false, table, ROWS, COLS);
@@ -238,14 +247,17 @@ public class Test_UserChoosenBlockTracker_Activity extends Activity implements O
     public void onClick(View v) {
         ImageButton clickedTableBlock = (ImageButton) v;
         clickedTableBlock.setClickable(false);
-        Log.i("endOfTest", String.valueOf(clickedTableBlock.getTag()) + "--" + String.valueOf(trackedMemory[currentPoint]));
-
-
-        if(trackedMemory[currentPoint] == -2 && (int)clickedTableBlock.getTag() != -1) {
+        Log.i("endOfTest", String.valueOf(clickedTableBlock.getTag()) + "--a" + String.valueOf(trackedMemory[currentPoint]));
+        Log.i("endOfTest", String.valueOf(trackedMemory[currentPoint]));
+        Log.i("endOfTest", String.valueOf(clickedTableBlock.getTag()));
+        Log.i("endOfTest", String.valueOf(-2 == trackedMemory[currentPoint]));
+        Log.i("endOfTest", String.valueOf(-1 ==Integer.parseInt(clickedTableBlock.getTag().toString())));
+        if(trackedMemory[currentPoint] == -2 && Integer.parseInt(clickedTableBlock.getTag().toString())!= -1) {
             //successful in small round
             trackedMemory[currentPoint] = Integer.parseInt(String.valueOf(clickedTableBlock.getTag()));
 
             clickedTableBlock.setBackgroundColor(Color.CYAN);
+            clickedTableBlock.setImageResource((int)v.getTag(R.string.candidate));
             currentPoint = 0;
 
             blockAsynkTask = new BlockAsynkTask();
@@ -259,6 +271,7 @@ public class Test_UserChoosenBlockTracker_Activity extends Activity implements O
         }else if(trackedMemory[currentPoint] == Integer.parseInt(String.valueOf(clickedTableBlock.getTag()))){
             //following userChoosenBlock
             clickedTableBlock.setBackgroundColor(Color.CYAN);
+            clickedTableBlock.setImageResource((int)v.getTag(R.string.candidate));
             if(currentPoint+1 == pickedSize) {
                 rs.successToRound();
                 statusOfStars();

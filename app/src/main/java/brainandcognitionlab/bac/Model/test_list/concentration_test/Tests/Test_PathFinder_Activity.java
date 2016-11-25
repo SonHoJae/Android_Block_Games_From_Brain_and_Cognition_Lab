@@ -146,6 +146,7 @@ public class Test_PathFinder_Activity extends Activity
             Log.i("asynktask", String.valueOf("X " + String.valueOf(line[0].getP1().getX()) + " " + String.valueOf(line[0].getP1().getY())) + " Y " +
                     String.valueOf(line[0].getP2().getX() + " " + String.valueOf(line[0].getP2().getY())));
 
+            /*
             if (line[0].isHorizontal()) {
                 for (int i = line[0].getP1().getX(); i != line[0].getP2().getX(); ) {
                     table[9 - line[0].getP1().getY()][Math.abs(symmetricNumber - i)].setImageDrawable(getDrawable(R.drawable.reddot2));
@@ -168,7 +169,7 @@ public class Test_PathFinder_Activity extends Activity
                         i++;
                 }
             }
-
+            */
             Log.i("asynktask", "length = " + String.valueOf(Math.abs(symmetricNumber - line[0].getP1().getX())));
 
             table[9 - line[0].getP1().getY()][Math.abs(symmetricNumber - line[0].getP1().getX())].setImageDrawable(getDrawable(R.drawable.yellow_star2));

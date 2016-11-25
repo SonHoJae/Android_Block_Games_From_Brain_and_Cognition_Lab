@@ -33,7 +33,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/linearLayout"
-            android:background="@drawable/board_background"
             android:gravity="center"
             android:layout_weight="7">
             <TableLayout
