@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.util.Log;
 
 import brainandcognitionlab.bac.Controller.DB.DBHelper;
 import brainandcognitionlab.bac.Controller.DB.Record;
@@ -41,13 +42,16 @@ public class AlertFunctions {
                     }
                 });
             alertDialog.show();
-
     }
+
     public void alertSuccessDialogWithTransition(final Intent nextIntent) {
-        RoundStatus rs = nextIntent.getExtras().getParcelable("rs");
+        final RoundStatus rs = nextIntent.getExtras().getParcelable("rs");
         new Thread(new Runnable(){
             public void run(){
                 Record record = nextIntent.getExtras().getParcelable("record");
+                if(rs.getNumOfStars() == 0){
+                    record.setLEVEL(String.valueOf(Integer.parseInt(record.getLEVEL())-1));
+                }
                 dbHelper.insertDataToRecordTable(record);
             }
         }).start();

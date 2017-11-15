@@ -137,7 +137,8 @@ public class RoundStatus implements Parcelable {
                     this.increaseLevel();
                     this.setNumOfStars(0);
                     this.setInternalStage(new Pair(0, 0));
-                } else {
+                }
+                else {
                     this.increaseNumOfStar();
                 }
             }

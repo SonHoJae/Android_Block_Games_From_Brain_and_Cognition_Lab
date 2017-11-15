@@ -57,6 +57,7 @@ public class Test_OrderTracker_Activity extends Activity implements OnClickListe
     private Chronometer chronometer;
     private DBHelper dbHelper = new DBHelper(this);
     private String start_date,end_date;
+    private Integer candidateImageId[];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,6 +91,12 @@ public class Test_OrderTracker_Activity extends Activity implements OnClickListe
         tempStatusView.setText("level   " + rs.getLevel() + " first   "
                 + rs.getInternalStage().first + " second   " + rs.getInternalStage().second + " stars   "
                 + rs.getNumOfStars());
+
+        candidateImageId = new Integer[9];
+        for(int i=0;i<9;i++) {
+            candidateImageId[i] = this.getResources().getIdentifier("s"+String.valueOf(i), "drawable", this.getPackageName());
+        }
+
         //테이블을 생성하는 부분
         table = new ImageButton[ROWS][];
         table_layout = (TableLayout) findViewById(R.id.tableLayout);
@@ -139,8 +146,9 @@ public class Test_OrderTracker_Activity extends Activity implements OnClickListe
 
             tableFunc.cleanTable(table,ROWS,COLS,R.drawable.s);
 
-            table[result[0] / ROWS][result[0] % COLS].setImageDrawable(getDrawable(R.drawable.s1));
+            table[result[0] / ROWS][result[0] % COLS].setImageResource(candidateImageId[1]);
             table[result[0] / ROWS][result[0] % COLS].setScaleType(ImageView.ScaleType.FIT_XY);
+            table[result[0] / ROWS][result[0] % COLS].setAdjustViewBounds(true);
             //table[result[0] / ROWS][result[0] % COLS].setText("T");
 
             //table[result[0]/pickedSize][result[0]%pickedSize].setBackgroundColor(Color.RED);

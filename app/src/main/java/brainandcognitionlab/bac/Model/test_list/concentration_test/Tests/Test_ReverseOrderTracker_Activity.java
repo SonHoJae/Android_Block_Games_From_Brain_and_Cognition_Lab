@@ -57,6 +57,7 @@ public class Test_ReverseOrderTracker_Activity extends Activity implements OnCli
     private Chronometer chronometer;
     DBHelper dbHelper = new DBHelper(this);
     String start_date,end_date;
+    private Integer candidateImageId[];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +89,12 @@ public class Test_ReverseOrderTracker_Activity extends Activity implements OnCli
         tempStatusView.setText("level   " + rs.getLevel() + " first   "
                 + rs.getInternalStage().first + " second   " + rs.getInternalStage().second + " stars   "
                 + rs.getNumOfStars());
+
+        candidateImageId = new Integer[9];
+        for(int i=0;i<9;i++) {
+            candidateImageId[i] = this.getResources().getIdentifier("s"+String.valueOf(i), "drawable", this.getPackageName());
+        }
+
         //테이블을 생성하는 부분
         table = new ImageButton[ROWS][];
         table_layout = (TableLayout) findViewById(R.id.tableLayout);
@@ -134,8 +141,9 @@ public class Test_ReverseOrderTracker_Activity extends Activity implements OnCli
 
         protected void onProgressUpdate(Integer... result) {
             tableFunc.cleanTable(table, ROWS, COLS,R.drawable.s);
-            table[result[0] / ROWS][result[0] % COLS].setImageDrawable(getDrawable(R.drawable.s1));
+            table[result[0] / ROWS][result[0] % COLS].setImageResource(candidateImageId[1]);
             table[result[0] / ROWS][result[0] % COLS].setScaleType(ImageView.ScaleType.FIT_XY);
+            table[result[0] / ROWS][result[0] % COLS].setAdjustViewBounds(true);
         }
 
         protected void onPostExecute(Integer result) {

@@ -54,6 +54,7 @@ public class Test_BlockChecker_Activity extends Activity implements OnClickListe
     private User user;
     private DBHelper dbHelper = new DBHelper(this);
     private String start_date,end_date;
+    private Integer candidateImageId[];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,6 +87,13 @@ public class Test_BlockChecker_Activity extends Activity implements OnClickListe
         tempStatusView.setText("level   " + rs.getLevel() + " first   "
                 + rs.getInternalStage().first + " second   " + rs.getInternalStage().second + " stars   "
                 + rs.getNumOfStars());
+
+
+        candidateImageId = new Integer[9];
+        for(int i=0;i<9;i++) {
+            candidateImageId[i] = this.getResources().getIdentifier("s"+String.valueOf(i), "drawable", this.getPackageName());
+        }
+
         //테이블을 생성하는 부분
         table_layout = (TableLayout) findViewById(R.id.tableLayout);
 
@@ -138,8 +146,11 @@ public class Test_BlockChecker_Activity extends Activity implements OnClickListe
 
             //table[result[0]/pickedSize][result[0]%pickedSize].setBackgroundColor(Color.RED);
 
-            table[result[0] / ROWS][result[0] % COLS].setImageDrawable(getDrawable(R.drawable.s1));
+            table[result[0] / ROWS][result[0] % COLS].setImageResource(candidateImageId[1]);
             table[result[0] / ROWS][result[0] % COLS].setScaleType(ImageView.ScaleType.FIT_XY);
+            table[result[0] / ROWS][result[0] % COLS].setAdjustViewBounds(true);
+
+            //table[result[0] / ROWS][result[0] % COLS].setImageDrawable(getDrawable(R.drawable.s1));
         }
 
         protected void onPostExecute(Integer result) {
@@ -177,6 +188,7 @@ public class Test_BlockChecker_Activity extends Activity implements OnClickListe
             tableFunc.makeButtonCorrectImage((ImageButton)v,R.drawable.s1);
             if (orderCheckNumber == pickedSize) {
                 rs.successToRound();
+                Log.i("database_level","Number of stars " + String.valueOf(rs.getNumOfStars()));
                 statusOfStars();
                 if (rs.getNumOfStars() == 0)
                     stars[2].setImageDrawable(getResources().getDrawable(R.drawable.yellow_star));
